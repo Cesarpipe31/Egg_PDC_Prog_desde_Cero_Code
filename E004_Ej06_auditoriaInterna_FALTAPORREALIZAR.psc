@@ -25,5 +25,12 @@ Algoritmo E004_Ej06_auditoriaInterna
 	//  inicar sesion con usuario de admininstrador para ver informes marketing y enviar email actualización luego de terminar solicitudes
 	//  Imprimir por pantalla lista de tareas en el orden que corresponde
 	
-	// 
+	// 1.  Lo principal que debes hacer es completar la hoja de cálculo de ingresos mensuales. Puedes hacerlo buscando 
+	// los últimos ingresos publicitarios en los informes de marketing.
+	
+	// 2.  Dspués de hacer todo eso, revisa mi correo electrónico y si hay menos de 10 correos sin leer revisa mi 
+	// correo de voz para ver si hay alguna solicitud de los ejecutivos. Si hay tales solicitudes, hágalas primero 
+	// a menos que tenga una solicitud de emergencia de otro departamento. 
+	
+	
 FinAlgoritmo
