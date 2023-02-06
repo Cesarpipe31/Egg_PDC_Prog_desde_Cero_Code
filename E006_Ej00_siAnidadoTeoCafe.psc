@@ -5,18 +5,14 @@ Algoritmo E006_Ej00_siAnidadoTeoCafe
 	//	si prefiere leche vegetal.
 	
 	Definir teoCafe, formaCafe Como Caracter
-	Definir teo Como Logico
+	
 	
 	Escribir "Qué deseas tomar? Escoge: Té o Café ? Escoge uno solo:"
 	Leer teoCafe
 	
 	teoCafe = Mayusculas(teoCafe)
-	Escribir teoCafe
-	
-	teo = ((teoCafe <> "TÉ") o (teoCafe <> "CAFÉ"))
-	Escribir teo
-
-	Si ((teoCafe <> "TÉ") o (teoCafe <> "CAFÉ")) Entonces
+		
+	Si ((teoCafe <> "TÉ") y (teoCafe <> "CAFÉ")) Entonces
 		Escribir "Inicia nuevamente, solo puedes escoger una de las dos bebidas: Té o Café"
 	SiNo
 		Si (teoCafe == "TÉ") Entonces
