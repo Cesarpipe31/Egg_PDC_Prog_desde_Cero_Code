@@ -15,17 +15,17 @@ Algoritmo E007_Ej00_vocalSecreta
 	vocalGuardada = Mayusculas(vocalGuardada)
 	VocalPropuesta = Mayusculas(vocalPropuesta)
 	
-	cantidadVecesPropuesta = 0
+	cantidadVecesPropuesta = 1  // Inicia con 1, ya que el mientras se ejecuta por lo menos una vez.
 	
 	Mientras vocalGuardada  <> vocalPropuesta Hacer
 		Escribir "Digite nuevamente una vocal propuesta, ya que " vocalPropuesta " no es la vocal guardada"		
 		leer vocalPropuesta
 		vocalPropuesta = Mayusculas(vocalPropuesta)
-		cantidadVecesPropuesta = cantidadVecesPropuesta + 1		
+		cantidadVecesPropuesta = cantidadVecesPropuesta + 1
 	Fin Mientras
 	
 	Escribir ""
 	Escribir ""
-	Escribir "Has finalizado con éxito y has digitado " cantidadVecesPropuesta + 1 " veces una propuesta de solución"
+	Escribir "Has finalizado con éxito y has digitado " cantidadVecesPropuesta " veces una propuesta de solución"
 
 FinAlgoritmo
