@@ -10,6 +10,7 @@ Algoritmo E005_Ej06_iniciaPorA
 	leer fraseoPalabraRegistrada
 	
 	primerCaracter = Subcadena(fraseoPalabraRegistrada, 0, 0)
+	primerCaracter = Mayusculas(primerCaracter)
 	
 	Si ( primerCaracter = "A" ) Entonces
 		Escribir "Correcto!!!. En su frase o palabra ", fraseoPalabraRegistrada, " se evidencia que inicia por la palabra A."

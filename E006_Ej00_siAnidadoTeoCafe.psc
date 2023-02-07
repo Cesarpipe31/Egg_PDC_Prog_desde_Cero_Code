@@ -5,7 +5,7 @@ Algoritmo E006_Ej00_siAnidadoTeoCafe
 	//	si prefiere leche vegetal.
 	
 	Definir teoCafe, formaCafe Como Caracter
-	
+	Definir lecheVegetal Como Logico	
 	
 	Escribir "Qué deseas tomar? Escoge: Té o Café ? Escoge uno solo:"
 	Leer teoCafe
@@ -19,14 +19,20 @@ Algoritmo E006_Ej00_siAnidadoTeoCafe
 			Escribir "Has decidido tomar té!!! Felicitaciones, excelente decisión"			
 		SiNo 
 			Si (teoCafe == "CAFÉ") Entonces
-				Escribir "Ya que quieres café, lo quieres solo o cortado:"
+				Escribir "Ya que quieres café, ¿lo quieres solo o cortado?:"
 				Leer formaCafe
 				formaCafe = Mayusculas(formaCafe)
 				Si(formaCafe == "SOLO") Entonces
 					Escribir "Perfecto. Has decidido tomar café solo."
 				SiNo
 					Si (formaCafe == "CORTADO") Entonces
-						Escribir "Perfecto. Has decidido tomar café cortado."						
+						Escribir "¿Prefieres leche vegetal? 1 para sí, 0 para no"
+						leer lecheVegetal
+						Si (lecheVegetal = verdadero) Entonces
+							Escribir "Has escogido un delicioso café con leche vegetal"
+						SiNo						
+							Escribir "Perfecto. Has decidido tomar café cortado sin leche vegetal."
+						FinSi						
 					FinSi					
 				FinSi				
 			FinSi
