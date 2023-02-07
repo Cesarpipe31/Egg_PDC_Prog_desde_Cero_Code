@@ -94,5 +94,7 @@ Algoritmo E006_EjEx08_salariosPersonal
 					Escribir "Se le reconoce por salario por trabajar " sfeCantidadHorasTrabajadasSemana " horas en la semana (las primeras 40 horas a vr hora normal, más de 40 horas se pagan a razón de 1.5 )  y se le pagará: $" sfeTotalaPagar
 				FinSi										
 			FinSi
+		De Otro Modo:
+			Escribir "Opción inválida"
 	FinSegun	
 FinAlgoritmo
