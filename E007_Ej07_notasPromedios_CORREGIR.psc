@@ -1,4 +1,4 @@
-Algoritmo sin_titulo
+Algoritmo E007_Ej07_notasPromedios_CORREGIR
 	
 	//  Estructuras repetitivas: Mientras 
 	
