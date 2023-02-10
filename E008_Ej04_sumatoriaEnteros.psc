@@ -20,7 +20,7 @@ Algoritmo E008_Ej04_sumatoriaEnteros
 	
 	bandera = Falso
 	sumatoriaNumeros = 0
-		
+	
 	Repetir
 		Escribir "Digíte un número entero positivo: "
 		leer numeroEntero
