@@ -23,8 +23,7 @@ Algoritmo E008_Ej07_adivinarNumeroAlAzar
 	Definir numeroMasPequenho, numeroMasGrande Como Caracter
 	
 	numeroAlAzar = Aleatorio(1,10)
-	escribir numeroAlAzar
-	
+		
 	Hacer
 		Escribir "Digite un número de 1 a 10: "
 		leer numeroDigitado

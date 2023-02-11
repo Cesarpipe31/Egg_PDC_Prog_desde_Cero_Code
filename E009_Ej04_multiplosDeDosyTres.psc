@@ -30,5 +30,5 @@ Algoritmo E009_Ej04_multiplosDeDosyTres
 		
 	FinPara
 	Escribir ""
-	Escribir "Entre 1 y 100 la cantidad de números múltiplos de 2 es " cantNumeros2 ",  la cantidad de múltiplos de 3 es " cantNumeros3 " y la cantidad de multiplos de 2 y 3 simultánemanete es " cantNumeros2y3
+	Escribir "Entre 1 y 100 la cantidad de números múltiplos de 2 exclusivamente es " cantNumeros2 ",  la cantidad de múltiplos de 3 exclusivamente es " cantNumeros3 " y la cantidad de multiplos de 2 y 3 simultánemanete es " cantNumeros2y3
 FinAlgoritmo

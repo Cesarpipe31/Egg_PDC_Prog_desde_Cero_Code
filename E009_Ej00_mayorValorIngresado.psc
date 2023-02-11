@@ -9,7 +9,7 @@ Algoritmo E009_Ej00_mayorValorIngresado
 	numeroMaximo = 0
 	
 	Para i <- 1 Hasta 10 Con Paso 1 Hacer
-		Escribir "Digite el número pque desee registrar: "
+		Escribir "Digite el número que desee registrar: "
 		Leer numeroPreferido
 		si (numeroPreferido > numeroMaximo) Entonces
 			numeroMaximo = numeroPreferido
