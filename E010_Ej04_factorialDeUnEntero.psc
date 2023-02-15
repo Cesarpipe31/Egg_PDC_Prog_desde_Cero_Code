@@ -18,9 +18,9 @@ Algoritmo E010_Ej04_factorialDeUnEntero
 		
 	Para i <- 1 Hasta cantidadEntero Con Paso 1 Hacer
 		
-		resultadoActual = 1  //  ract
+		resultadoActual = 1  
 		
-		resultadoAnterior = 1  //  rant
+		resultadoAnterior = 1 
 		
 		Escribir sin saltar i, "! = "
 		

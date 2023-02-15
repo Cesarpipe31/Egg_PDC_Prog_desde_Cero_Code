@@ -17,9 +17,9 @@ Algoritmo E010_Ej01_companhiaSegurosySueldos
 	
 	// variables:  cantidadVendedores, sueldoBaseSemana, ventaSemana, porcentajeComision, valorComision, ValorSueldototal, comisionTotalVendedores, valorSueldoTotalVendedores
 	
-	Definir cantidadVendedores, sueldoBaseSemana, ventaSemana, porcentajeComision, valorComision, valorSueldoTotal como Real	
+	Definir cantidadVendedores, sueldoBaseSemana, ventaSemana, porcentajeComision, valorComision, valorSueldoTotal, valorVentaUnitaria como Real	
 	Definir comisionTotalVendedores, valorSueldoTotalVendedores como Real
-	Definir i Como Entero
+	Definir i, cantidadVentasSemana, cuentaVentasSemana Como Entero
 	Definir nombreVendedor Como Caracter
 	
 	Escribir "Digite el porcentaje sobre la comisión en ventas, que se aplicará a todos los vendedores (Ejemplo: 7 para el 7%): "
@@ -30,15 +30,25 @@ Algoritmo E010_Ej01_companhiaSegurosySueldos
 	
 	comisionTotalVendedores = 0
 	valorSueldoTotalVendedores = 0
+
 	
 	
 	Para i <- 1 Hasta cantidadVendedores Con Paso 1 Hacer		
+		cuentaVentasSemana = 1
+		cantidadVentasSemana =0
+		ventaSemana = 0
 		Escribir "Escriba el nombre del vendedor: "
 		Leer nombreVendedor
 		Escribir "Escriba el sueldo base semanal para el vendedor: " nombreVendedor
 		leer sueldoBaseSemana
-		Escribir "Escriba el valor en ventas que realizó durante la semana el vendedor: " nombreVendedor
-		leer ventaSemana
+		Escribir "Escriba la cantidad de ventas realizadas en la semana por: " nombreVendedor
+		leer cantidadVentasSemana
+		Mientras (cuentaVentasSemana <= cantidadVentasSemana) Hacer			
+			Escribir "Digite la venta " cuentaVentasSemana ":"
+			Leer valorVentaUnitaria
+			ventaSemana = ventaSemana +  valorVentaUnitaria			
+			cuentaVentasSemana = cuentaVentasSemana + 1
+		FinMientras
 		valorComision = ventaSemana * (porcentajeComision / 100)
 		valorSueldoTotal = sueldoBaseSemana + valorComision
 		comisionTotalVendedores = comisionTotalVendedores + valorComision
