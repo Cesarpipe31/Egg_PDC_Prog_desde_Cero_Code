@@ -7,9 +7,9 @@ Algoritmo E012_Ej06_funcionSumaDivisores
 	Escribir "Escriba el número de su preferencia: "
 	leer numeroPreferido
 	
-	suma = sumaDivisores (numeroPreferido)
+	suma = sumaDivisores(numeroPreferido)
 	
-	Escribir "La suma de los divisores de " numeroPreferido ", sin tener en cuenta al mismo " numeroPreferido " es: " suma "."
+	Escribir "La suma de los divisores de " numeroPreferido ", sin tener en cuenta al mismo " numeroPreferido "  es:  " suma "."
 	
 FinAlgoritmo
 
