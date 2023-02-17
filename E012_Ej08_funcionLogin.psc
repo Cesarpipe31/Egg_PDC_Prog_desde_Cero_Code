@@ -28,7 +28,8 @@ Funcion retorno <- Login(nombreUsuario, contrasenha)
 	retorno = falso
 	cuentaIntentos = 1
 		
-	Mientras ((cuentaIntentos < 3) y (usuarioCorrecto <> nombreUsuario y contrasenhaCorrecta <> contrasenha)) Hacer
+	Hacer
+	//Mientras ((cuentaIntentos < 3) y (usuarioCorrecto <> nombreUsuario y contrasenhaCorrecta <> contrasenha)) Hacer
 		cuentaIntentos = cuentaIntentos + 1
 		Escribir "Digite nuevamente su usuario y password, pues han quedado mal registados"
 		Escribir "Digite su usuario: "
@@ -44,6 +45,7 @@ Funcion retorno <- Login(nombreUsuario, contrasenha)
 				Escribir retorno
 			FinSi			
 		FinSi				
-	Fin Mientras		
+		//Fin Mientras		
+	Hasta Que ((cuentaIntentos = 3) o  (usuarioCorrecto = nombreUsuario y contrasenhaCorrecta = contrasenha))
 	
 FinFuncion
