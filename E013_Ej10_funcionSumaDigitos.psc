@@ -10,6 +10,8 @@ Algoritmo E012_Ej10_funcionSumaDigitos
 	numeroASumarDigitos = 0
 	numeroASumarDigitos = sumaDigitos(numeroASumarDigitos)
 	
+	Escribir "En la parte entera del número registrado suman sus dígitos: " numeroASumarDigitos "."		
+	
 FinAlgoritmo
 
 
@@ -45,7 +47,7 @@ Funcion retorno <- sumaDigitos(numeroPreferido)
 		
 	FinMientras
 	
-	Escribir "En la parte entera del número " numeroEnteroInicial ", suman sus dígitos: " retorno "."		
+	//Escribir "En la parte entera del número " numeroEnteroInicial ", suman sus dígitos: " retorno "."		
 	
 FinFuncion
 
