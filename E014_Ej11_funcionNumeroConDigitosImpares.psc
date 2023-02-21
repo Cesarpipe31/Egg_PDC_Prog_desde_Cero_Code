@@ -43,7 +43,6 @@ Funcion retorno <- identificaParImpar(numeroPreferido)
 	FinSi
 	numeroPreferido = trunc(numeroPreferido)
 	
-	
 	retorno = 0
 	cuentaImpar = 0
 	cuentaPar = 0 
