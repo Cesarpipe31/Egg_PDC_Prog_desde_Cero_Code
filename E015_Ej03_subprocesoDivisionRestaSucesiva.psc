@@ -20,7 +20,7 @@ Algoritmo E015_Ej02_subprocesoDivisionRestaSucesiva
 	Escribir ""
 	
 	Mientras numeroDivisor > numeroDividendo
-		Escribir "Parece que hay un error!!!. Has registrado un divisor que es mayor que el dividendo.  Registra nuevamente. Recuerda: Dividendo debe ser mayor que divisor."
+		Escribir "Parece que hay un error!!!. Has registrado un divisor que es mayor que el dividendo.  Registra nuevamente. Recuerda: Dividendo debe ser mayor o igual que divisor."
 		Escribir ""
 		
 		Escribir "Registra nuevamente. Escriba el número dividendo: "
@@ -40,11 +40,13 @@ FinAlgoritmo
 
 
 
-SubProceso divisionRestasSucesivas(dividendo Por Valor, divisor Por Valor, cociente Por Referencia, resto Por Referencia)
-	resto = dividendo
+SubProceso divisionRestasSucesivas(dividendo Por Valor, divisor Por Valor, cociente Por Referencia, residuo Por Referencia)
+	
 	cociente = 0
-	Mientras (resto > divisor) Hacer
-		resto = dividendo - divisor
+	
+	Mientras (dividendo >= divisor) Hacer
+		
+		residuo = dividendo - divisor
 		
 		dividendo = dividendo - divisor
 		
