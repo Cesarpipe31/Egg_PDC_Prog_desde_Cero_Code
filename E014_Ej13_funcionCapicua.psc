@@ -22,9 +22,8 @@ FinAlgoritmo
 
 
 Funcion retorno <- invertirNumero (numeroRegistrado)
-	Definir retorno, numeroInicial, numeroUnidad, nuevoNumero Como Entero
-	
-	numeroInicial = numeroRegistrado
+	Definir retorno, numeroUnidad, nuevoNumero Como Entero
+		
 	numeroUnidad = 0
 	nuevoNumero = 0
 	
