@@ -15,8 +15,6 @@ Algoritmo E016_Ej05_subprocesoConvertirEspaciado
 	
 FinAlgoritmo
 
-
-
 SubProceso convertirEspaciado (fraseInicial Por Referencia, fraseFinal Por Referencia)
 	Definir longitudFrase, i Como Entero
 	Definir letraFrase, fraseFinalTemporal Como Caracter

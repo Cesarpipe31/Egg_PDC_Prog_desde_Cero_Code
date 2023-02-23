@@ -31,7 +31,7 @@ FinAlgoritmo
 
 SubProceso fraseCodificada (frase Por Referencia, nuevaFrase Por Referencia)
 	Definir longitudFrase, i Como Entero
-	Definir letraFrase, letraCodificada Como Caracter
+	Definir letraFrase Como Caracter
 	
 	longitudFrase = Longitud(frase)
 	nuevaFrase = ""
@@ -39,29 +39,23 @@ SubProceso fraseCodificada (frase Por Referencia, nuevaFrase Por Referencia)
 	Para i <- 0 Hasta longitudFrase Con Paso 1 Hacer
 		letraFrase = Subcadena(frase, i, i)
 		letraFrase = Minusculas(letraFrase)
-		
 			
-		Si (letraFrase == "a" o letraFrase == "e" o letraFrase == "i" o letraFrase == "o" o letraFrase == "u") Entonces
-					
+		Si (letraFrase == "a" o letraFrase == "e" o letraFrase == "i" o letraFrase == "o" o letraFrase == "u") Entonces					
 			Segun letraFrase Hacer
 				"a":
-					letraCodificada = "@"
+					letraFrase = "@"
 				"e":
-					letraCodificada = "#"
+					letraFrase = "#"
 				"i":
-					letraCodificada = "$"
+					letraFrase = "$"
 				"o":
-					letraCodificada = "%"
+					letraFrase = "%"
 				"u":
-					letraCodificada = "*"
+					letraFrase = "*"
 				De Otro Modo:
 					Escribir "Opción no valida."
-			FinSegun				
-				nuevaFrase = Concatenar(nuevaFrase, letraCodificada)
-				
-			SiNo
-				nuevaFrase = Concatenar(nuevaFrase, letraFrase)
+			FinSegun
 		FinSi		
-		
+		nuevaFrase = Concatenar(nuevaFrase, letraFrase)
 	FinPara	
 FinSubProceso
