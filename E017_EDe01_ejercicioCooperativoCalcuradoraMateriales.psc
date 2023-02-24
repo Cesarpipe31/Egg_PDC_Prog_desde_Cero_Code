@@ -49,13 +49,21 @@ SubProceso  menu(opcionEscogida Por Referencia)
 	
 	Segun opcionPreferida Hacer
 		1: calcularMuro()
+			volveraMenu
 		2: calcularViga()
+			volveraMenu
 		3: calcularColumna
+			volveraMenu
 		4: calcularContrapisos					
+			volveraMenu
 		5: calcularTecho
+			volveraMenu
 		6: calcularPisos			
+			volveraMenu
 		7: calcularPintura
+			volveraMenu
 		8: calcularIluminacion
+			volveraMenu
 		9: SalirPrograma
 			
 	FinSegun	
@@ -300,6 +308,17 @@ SubProceso calcularIluminacion()
 	cantidadMinimaIluminacionNatural = superficieHabitacion * 0.2
 		
 	Escribir "Para una superficie de habitación de " superficieHabitacion " metros cuadrados, se necesitarán como mínimo " cantidadMinimaIluminacionNatural " metros cuadrados iluminados naturalmente."
+	
+FinSubProceso
+
+SubProceso volveraMenu()
+	Definir i  Como Entero
+	Definir j Como Caracter	
+	Escribir ""
+	Escribir "Digite cualquier letra para continuar"
+	Leer j
+	Borrar Pantalla
+	menu(i)
 FinSubProceso
 
 Subproceso salirPrograma()
