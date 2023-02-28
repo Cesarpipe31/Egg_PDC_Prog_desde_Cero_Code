@@ -112,7 +112,7 @@ SubProceso calcularMuro()
 	Leer muroEspesor
 	
 	Mientras (muroEspesor <> 20 y muroEspesor <> 30) Hacer		
-		Escribir "Has registrado un valor diferente a 20 o 30 para el espesor del muro."
+		Escribir "ATENCION!!!.  Has registrado un valor diferente a 20 o 30 para el espesor del muro."
 		Escribir ""
 		Escribir "Registra el dato correcto del espesor del muro, ya sea de 20 o 30 cms: "
 		Leer muroEspesor		
@@ -126,13 +126,13 @@ SubProceso calcularMuro()
 		cantidadCemento = superficieMuroMt * 15.2
 		cantidadArena = superficieMuroMt * 0.115 
 		cantidadLadrillos = superficieMuroMt * 120
-		Escribir "Con un espesor de " muroEspesor " cms, tendremos y necesitaremos... Una superficie(en metros cuadrados) de: " superficieMuroMt "; una cantidad de cemento de: " cantidadCemento "Kgs; una cantidad de arena de: " cantidadArena "mts cúbicos y una cantidad de ladrillos de: " cantidadLadrillos "."
+		Escribir "ATENCION!!!.  Con un espesor de " muroEspesor " cms, tendremos y necesitaremos... Una superficie(en metros cuadrados) de: " superficieMuroMt "; una cantidad de cemento de: " cantidadCemento "Kgs; una cantidad de arena de: " cantidadArena "mts cúbicos y una cantidad de ladrillos de: " cantidadLadrillos "."
 	SiNo
 		Si (muroEspesor == 20) Entonces
 			cantidadCemento = superficieMuroMt * 10.9
 			cantidadArena = superficieMuroMt * 0.09
 			cantidadLadrillos = superficieMuroMt * 90
-			Escribir "Con un espesor de " muroEspesor " cms, tendremos y necesitaremos... Una superficie(en metros cuadrados) de: " superficieMuroMt "; una cantidad de cemento de: " cantidadCemento "Kgs; una cantidad de arena de: " cantidadArena "mts cúbicos y una cantidad de ladrillos de: " cantidadLadrillos "."
+			Escribir "ATENCION!!!.  Con un espesor de " muroEspesor " cms, tendremos y necesitaremos... Una superficie(en metros cuadrados) de: " superficieMuroMt "; una cantidad de cemento de: " cantidadCemento "Kgs; una cantidad de arena de: " cantidadArena "mts cúbicos y una cantidad de ladrillos de: " cantidadLadrillos "."
 		FinSi		
 	FinSi	
 FinSubProceso
@@ -159,7 +159,7 @@ SubProceso calcularViga()
 	cantidadPiedras = largoViga * 0.02
 	cantidadHierro8 = largoViga * 4
 	cantidadHierro4 = largoViga * 3
-	Escribir "Con un largo de viga de  " largoViga " metros lineales necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos; una cantidad de piedras de: " cantidadPiedras " metros cuadrados; una cantidad de hierro de 8 de: " cantidadHierro8  " metros y una cantidad de hierro de 4 de: " cantidadHierro4 " metros."		
+	Escribir "ATENCION!!!.  Con un largo de viga de  " largoViga " metros lineales necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos; una cantidad de piedras de: " cantidadPiedras " metros cuadrados; una cantidad de hierro de 8 de: " cantidadHierro8  " metros y una cantidad de hierro de 4 de: " cantidadHierro4 " metros."		
 FinSubProceso
 
 
@@ -182,7 +182,7 @@ SubProceso calcularColumna()
 	cantidadPiedras = largoColumna * 0.016
 	cantidadHierro10 = largoColumna * 6
 	cantidadHierro4 = largoColumna * 4
-	Escribir "Con un largo de columna de  " largoColumna " metros lineales necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos; una cantidad de piedras de: " cantidadPiedras " metros cuadrados; una cantidad de hierro de 10 de: " cantidadHierro10  " metros y una cantidad de hierro de 4 de: " cantidadHierro4 " metros."			
+	Escribir "ATENCION!!!.  Con un largo de columna de  " largoColumna " metros lineales necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos; una cantidad de piedras de: " cantidadPiedras " metros cuadrados; una cantidad de hierro de 10 de: " cantidadHierro10  " metros y una cantidad de hierro de 4 de: " cantidadHierro4 " metros."			
 FinSubProceso
 
 
@@ -211,7 +211,7 @@ SubProceso calcularContrapisos()
 	cantidadArena = volumenContraPiso * 0.45
 	cantidadPiedras = volumenContraPiso * 0.09
 	
-	Escribir "Con un volumen de " volumenContraPiso " metros cúbicos necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos;  y una cantidad de piedras de: " cantidadPiedras " metros cúbicos."			
+	Escribir "ATENCION!!!.  Con un volumen de " volumenContraPiso " metros cúbicos necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos;  y una cantidad de piedras de: " cantidadPiedras " metros cúbicos."			
 FinSubProceso
 
 
@@ -243,7 +243,7 @@ SubProceso calcularTecho()
 	cantidadHierro8 = volumenTecho * 7
 	cantidadHierro6 = volumenTecho * 4
 	
-	Escribir "Con un volumen de " volumenTecho " metros cúbicos necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos;  y una cantidad de piedras de: " cantidadPiedras " metros cúbicos; una cantidad de hierro de 8 de: " cantidadHierro8  " metros y una cantidad de hierro de 6 de: " cantidadHierro6 " metros."			
+	Escribir "ATENCION!!!.  Con un volumen de " volumenTecho " metros cúbicos necesitaremos... Una cantidad de cemento de " cantidadCemento " Kgs; una cantidad de arena de: " cantidadArena " metros cúbicos;  y una cantidad de piedras de: " cantidadPiedras " metros cúbicos; una cantidad de hierro de 8 de: " cantidadHierro8  " metros y una cantidad de hierro de 6 de: " cantidadHierro6 " metros."			
 FinSubProceso
 
 
@@ -266,7 +266,7 @@ SubProceso calcularPisos()
 	
 	superficiePanho = calcularSuperficie(largoPanho, anchoPanho) * 1.1
 		
-	Escribir "La superficie del piso es de " superficiePanho " metros cuadrados."
+	Escribir "ATENCION!!!.  La superficie del piso es de " superficiePanho " metros cuadrados."
 FinSubProceso
 
 
@@ -286,7 +286,7 @@ SubProceso calcularPintura()
 	
 	cantidadPintura = superficieMuro / 6
 	
-	Escribir "Para una superficie de muro de " superficieMuro " metros cuadrados, se requieren " cantidadPintura " litros de pintura."
+	Escribir "ATENCION!!!.  Para una superficie de muro de " superficieMuro " metros cuadrados, se requieren " cantidadPintura " litros de pintura."
 FinSubProceso
 
 
@@ -307,7 +307,7 @@ SubProceso calcularIluminacion()
 	
 	cantidadMinimaIluminacionNatural = superficieHabitacion * 0.2
 		
-	Escribir "Para una superficie de habitación de " superficieHabitacion " metros cuadrados, se necesitarán como mínimo " cantidadMinimaIluminacionNatural " metros cuadrados iluminados naturalmente."
+	Escribir "ATENCION!!!.  Para una superficie de habitación de " superficieHabitacion " metros cuadrados, se necesitarán como mínimo " cantidadMinimaIluminacionNatural " metros cuadrados iluminados naturalmente."
 	
 FinSubProceso
 
@@ -315,7 +315,7 @@ SubProceso volveraMenu()
 	Definir i  Como Entero
 	Definir j Como Caracter	
 	Escribir ""
-	Escribir "Digite cualquier letra para continuar"
+	Escribir "Oprima cualquier letra para continuar"
 	Leer j
 	Borrar Pantalla
 	menu(i)
