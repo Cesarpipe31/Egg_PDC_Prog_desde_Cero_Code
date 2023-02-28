@@ -23,7 +23,7 @@ Algoritmo E018_Ej03_vectornumeroNyBuscarNumeroEspecifico
 	Escribir "Su vector tendrá " cantidadDeNumeros  " números enteros."
 	
 	Para i <- 0 hasta cantidadDeNumeros - 1 Con Paso  1 Hacer		
-		vectorReales(i) = Aleatorio(1,19)
+		vectorReales(i) = Aleatorio(1,20)
 	FinPara
 	
 	numeroaBuscar = Aleatorio(1,20)
@@ -45,7 +45,17 @@ Algoritmo E018_Ej03_vectornumeroNyBuscarNumeroEspecifico
 		Escribir "El número " numeroaBuscar " aparece " cantidadVeces " veces."
 	SiNo
 		Escribir ""
-		Escribir "El número " numeroaBuscar " NO aparece en el vector."
+		Escribir "El número " numeroaBuscar " NO aparece en el vector y por tanto no se podrá emitir posiciones dentro del vector."
 	FinSi	
+	
+	Escribir ""
+	
+	Escribir "En las siguientes posiciones se encuentra el número buscado: "
+	
+	Para i <- 0 Hasta cantidadDeNumeros - 1 Con Paso 1 Hacer		
+		Si (vectorReales(i) == numeroaBuscar) Entonces
+			Escribir sin Saltar "[ " i " ] "			
+		FinSi				
+	FinPara
 	
 FinAlgoritmo
