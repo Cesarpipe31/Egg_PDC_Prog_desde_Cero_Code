@@ -38,7 +38,7 @@ Algoritmo E018_Ej04_vectorABC
 	opcionSubmenu = ""
 	
 	Mientras opcionDeseada <> "F" Hacer
-		
+		Borrar Pantalla
 		Escribir " ---   M E N Ú   --- "
 		Escribir ""
 		Escribir "A" " ---> Para llenar y mostrar Vector A."
