@@ -7,13 +7,13 @@ Algoritmo E020_EjEx05_vectorUnidimensionalConFraseReto
 	//	más cercano.
 	
 	//	Por ejemplo, suponiendo la siguiente frase y los subíndices del vector:
-	//	H	o	l	a		m	u	n	d	o	c	r	u	e	l	!
+	//	H	o	l	a		m	u	n	d	o		c	r	u	e	l	!
 	//	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19
 	
 	//	Si se desea ingresar el carácter "%" en la posición 8, entonces el resultado con desplazamiento
 	//	sería:
 	
-	//	h	o	l	a		m	u	n	%	d	o	c	r	u	e	l	!
+	//	h	o	l	a		m	u	n	%	d	o		c	r	u	e	l	!
 	//	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	
 	
 	//	Notar que el desplazamiento se hizo hacia la izquierda porque el espacio de la posición 10 estaba

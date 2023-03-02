@@ -43,6 +43,6 @@ SubProceso imprimirVectores(vectorTexto, vectorLongitud, cantN)
 	Definir i Como Entero
 	
 	Para i <- 0 Hasta cantN - 1 Con Paso 1 Hacer
-		Escribir "El texto  " vectorTexto(i) "  tiene una longitud de  " vectorLongitud(i)
+		Escribir "El texto  *** " vectorTexto(i) " ****  tiene una longitud de  " vectorLongitud(i)
 	FinPara
 FinSubProceso

@@ -43,16 +43,24 @@ Algoritmo E018_Ej06_vectorUnidimensionalConFrase
 	FinPara
 	
 	Para i <- 0 Hasta 20 - 1 Con Paso 1 Hacer
-		Si ((vectorTexto(i)  == vectorTexto(posicionVector - 1)) y (vectorTexto(posicionVector - 1) == " ")) Entonces			
-			nuevoVectorTexto(i) = caracterAdicionar
+		Si ((i  == (posicionVector - 1)) y (vectorTexto(posicionVector - 1) == " ")) Entonces			
+			nuevoVectorTexto(i) = caracterAdicionar			
 		SiNo			
-			nuevoVectorTexto(i) = vectorTexto(i)
+			nuevoVectorTexto(i) = vectorTexto(i)			
 		FinSi
 	FinPara
 	
+	Si ((nuevoVectorTexto(posicionVector - 1) == caracterAdicionar)) Entonces		
+		Escribir ""
+		Escribir "El nuevo texto es: "
+		Escribir ""
+		Para i <- 0 Hasta 20 - 1 Con Paso 1 Hacer
+			Escribir Sin Saltar nuevoVectorTexto(i)		
+		FinPara
+	SiNo
+		Escribir ""
+		Escribir "No es posible adicionar el carácter sugerido ya que la posición " posicionVector " está ocupada."
+	FinSi
 	
-	Para i <- 0 Hasta 20 - 1 Con Paso 1 Hacer
-		Escribir Sin Saltar nuevoVectorTexto(i)		
-	FinPara
 	
 FinAlgoritmo
