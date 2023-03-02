@@ -66,7 +66,7 @@ SubProceso registrarVectorA(vectorA Por Referencia, cantN Por Valor)
 	Definir i Como Entero	
 	
 	Para i <- 0 Hasta cantN - 1 Con Paso  1 Hacer
-		vectorA(i) = Aleatorio(0, 100)
+		vectorA(i) = Aleatorio(1, 2)
 	FinPara
 	
 FinSubProceso
@@ -76,7 +76,7 @@ SubProceso registrarVectorB(vectorB Por Referencia, cantN Por Valor)
 	Definir i Como Entero	
 	
 	Para i <- 0 Hasta cantN - 1 Con Paso  1 Hacer
-		vectorB(i) = Aleatorio(0, 100)
+		vectorB(i) = Aleatorio(1, 2)
 	FinPara
 	
 FinSubProceso
