@@ -16,9 +16,15 @@ Algoritmo E020_EjEx06_vectorFuncionDiferencia
 	valorMaximo = calcularMaximo(vector, cantidadElementos)
 	valorMinimo = calcularMinimo(vector, cantidadElementos)
 	
-	Escribir valorMaximo  " " valorMinimo
+	Escribir ""
 	imprimirVector(vector, cantidadElementos)
 	
+	Escribir ""
+	Escribir ""
+	Escribir "Valor mínimo: " valorMinimo
+	Escribir ""	
+	Escribir "Valor máximo: " valorMaximo  
+	Escribir ""	
 	
 FinAlgoritmo
 
@@ -35,9 +41,9 @@ Funcion max <- calcularMaximo(vectorMax,cantN)
 	Definir max, i Como Entero
 	max = 0
 	Para i <- 0 Hasta cantN -1 Con Paso 1 Hacer
-		Mientras (vectorMax(i) >= max) Hacer
-			max = vectorMax(i)
-		FinMientras	
+		Si (vectorMax(i) >= max) Entonces
+			max = vectorMax(i)			
+		FinSi		
 	FinPara	
 FinFuncion
 
@@ -46,9 +52,9 @@ Funcion min <- calcularMinimo(vectorMin, cantN)
 	Definir min, i Como Entero
 	min = 100
 	Para i <- 0 Hasta cantN -1 Con Paso 1 Hacer
-		Mientras (vectorMin(i) <= min) Hacer
+		Si (vectorMin(i) <= min) Entonces
 			min = vectorMin(i)
-		FinMientras	
+		FinSi	
 	FinPara	
 FinFuncion
 
@@ -56,7 +62,7 @@ FinFuncion
 SubProceso imprimirVector(vector, cantN)
 	Definir i Como Entero
 	Escribir "El vector contiene los siguientes números entre 1 y 100. "
-	Para i <- 0 Hasta cantN Con Paso 1 Hacer
+	Para i <- 0 Hasta cantN - 1 Con Paso 1 Hacer
 		Escribir Sin Saltar "[ " vector(i) " ]"
 	FinPara
 FinSubProceso
