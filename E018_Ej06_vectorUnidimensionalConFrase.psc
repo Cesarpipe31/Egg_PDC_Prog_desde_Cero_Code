@@ -22,7 +22,7 @@ Algoritmo E018_Ej06_vectorUnidimensionalConFrase
 	//	0	1	2	3	4	5	6	7	8	9	10 	11	12	13	14	15	16	17	18	19
 	
 	Definir vectorTexto, nuevoVectorTexto, caracterAdicionar, parteTexto, textoCompleto Como Caracter
-	Definir i, posicionVector Como Entero
+	Definir i, posicionVector, longitudTextoCompleto Como Entero
 	
 	Dimension vectorTexto(20)
 	Dimension nuevoVectorTexto(20)
@@ -36,11 +36,16 @@ Algoritmo E018_Ej06_vectorUnidimensionalConFrase
 	Escribir "Registre el caracter que desea registrar en la posición " posicionVector " en el Vector: "
 	Leer caracterAdicionar
 	
+	longitudTextoCompleto = Longitud(textoCompleto)
 	
 	Para i <- 0 Hasta 20 - 1 Con Paso 1 Hacer
-		parteTexto = Subcadena(textoCompleto, i, i)
-		vectorTexto(i) = parteTexto
-	FinPara
+		Si (i < longitudTextoCompleto) Entonces
+			parteTexto = Subcadena(textoCompleto, i, i)
+			vectorTexto(i) = parteTexto
+		SiNo
+			vectorTexto(i) =  " "
+		Finsi		
+	FinPara	
 	
 	Para i <- 0 Hasta 20 - 1 Con Paso 1 Hacer
 		Si ((i  == (posicionVector - 1)) y (vectorTexto(posicionVector - 1) == " ")) Entonces			
@@ -57,9 +62,11 @@ Algoritmo E018_Ej06_vectorUnidimensionalConFrase
 		Para i <- 0 Hasta 20 - 1 Con Paso 1 Hacer
 			Escribir Sin Saltar nuevoVectorTexto(i)		
 		FinPara
+		Escribir ""
 	SiNo
 		Escribir ""
 		Escribir "No es posible adicionar el carácter sugerido ya que la posición " posicionVector " está ocupada."
+		Escribir ""
 	FinSi
 	
 	
