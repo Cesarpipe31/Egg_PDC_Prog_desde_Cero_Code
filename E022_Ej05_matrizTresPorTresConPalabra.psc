@@ -40,6 +40,4 @@ Algoritmo E022_Ej05_matrizTresPorTresConPalabra
 		Escribir ""
 	FinPara
 	
-
-	
 FinAlgoritmo
