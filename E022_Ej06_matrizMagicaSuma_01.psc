@@ -17,9 +17,7 @@ Algoritmo E022_Ej06_matrizMagicaSuma
 	
 	Escribir "Registre la cantidad de elementos que tendrá la matriz cuadrada, tanto filas y columnas (De 1 a 10): "
 	Leer cantidadElementos
-	
-	sumatoria = 0
-	
+		
 	
 	Mientras (cantidadElementos < 1 o cantidadElementos > 10)	Hacer		
 		Escribir "Registre NUEVAMENTE la cantidad de elementos que tendrá la matriz cuadrada, tanto filas y columnas (De 1 a 10): "
@@ -31,57 +29,16 @@ Algoritmo E022_Ej06_matrizMagicaSuma
 	Dimension vectorSumaColumna(cantidadElementos)
 	Dimension vectorSumas(cantidadElementos * 2 + 2)	
 		
-	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-		Para j <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-			Escribir "Digite el número entero entre 1 y 9, en la posición (" (i+1) ", " (j+1) "):"
-			Leer numeroParaMatriz
-			Mientras (numeroParaMatriz < 1 o numeroParaMatriz > 10)	Hacer		
-				Escribir "Registre NUEVAMENTE el número entre 1 y 9, para la posición (" (i+1) ", " (j+1) "):"
-				Leer numeroParaMatriz
-			FinMientras	
-			matrizMagica(i, j) = numeroParaMatriz			
-		FinPara
-	FinPara
-	
-		
-	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-		Para j <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-			sumatoria = sumatoria + matrizMagica(i, j)
-		FinPara
-		vectorSumaFila(i) = sumatoria
-		sumatoria = 0
-	FinPara
-		
-	
-	sumatoria = 0
-	
-	Para j <- 0 Hasta cantidadElementos -1  Con Paso 1 Hacer
-		Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-			sumatoria = sumatoria + matrizMagica(i, j)
-		FinPara
-		vectorSumaColumna(j) = sumatoria
-		sumatoria = 0
-	FinPara
-	
 	sumaDiagonalUno = 0
-	
-	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-		Para j <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
-			Si (i == j) Entonces				
-				sumaDiagonalUno = sumaDiagonalUno + matrizMagica(i, j)
-			FinSi			
-		FinPara			
-	FinPara
-	
 	sumaDiagonalDos = 0
+	numeroParaMatriz = 0
 	
-	j = cantidadElementos - 1
-	
-	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer				
-		sumaDiagonalDos = sumaDiagonalDos + matrizMagica(i, j)	
-		j = j - 1							
-	FinPara		
-	
+	crearMatrizMagica(matrizMagica, cantidadElementos, numeroParaMatriz)
+	crearVectorSumaFila(matrizMagica, vectorSumaFila, cantidadElementos)
+	crearVectorSumaColumna(matrizMagica, vectorSumaColumna, cantidadElementos)
+	crearSumaDiagonalPrincipal(matrizMagica, sumaDiagonalUno, cantidadElementos)
+	crearSumaDiagonalSecundaria(matrizMagica, sumaDiagonalDos, cantidadElementos)		
+		
 	Escribir "La matriz es :"	
 	imprimirMatriz(matrizMagica, cantidadElementos)
 	Escribir ""
@@ -97,19 +54,7 @@ Algoritmo E022_Ej06_matrizMagicaSuma
 	Escribir ""
 	nuevoVector(vectorSumaFila, vectorSumaColumna, vectorSumas, cantidadElementos, sumaDiagonalUno, sumaDiagonalDos)
 	
-	sumasIguales = 0
-	sumasDiferentes = 0
-	bandera = vectorSumas(0)
-	
-	Para i <- 0 Hasta (cantidadElementos * 2 + 2 - 1)
-		
-		Si vectorSumas(i) == bandera Entonces
-			sumasIguales = sumasIguales + 1				
-		SiNo
-			sumasDiferentes = sumasDiferentes + 1			
-		FinSi
-		bandera = vectorSumas(i)		
-	FinPara
+	analizarVectorSumas(vectorSumas, sumasIguales, sumasDiferentes, cantidadElementos)
 	
 	Escribir ""
 	Si sumasIguales == (cantidadElementos * 2 + 2 ) Entonces
@@ -124,6 +69,75 @@ Algoritmo E022_Ej06_matrizMagicaSuma
 	FinSi
 	
 FinAlgoritmo
+
+
+SubProceso crearMatrizMagica(matrizMagica, cantidadElementos, numeroParaMatriz)
+	Definir i, j Como Entero
+	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+		Para j <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+			Escribir "Digite el número entero entre 1 y 9, en la posición (" (i+1) ", " (j+1) "):"
+			Leer numeroParaMatriz
+			Mientras (numeroParaMatriz < 1 o numeroParaMatriz > 10)	Hacer		
+				Escribir "Registre NUEVAMENTE el número entre 1 y 9, para la posición (" (i+1) ", " (j+1) "):"
+				Leer numeroParaMatriz
+			FinMientras	
+			matrizMagica(i, j) = numeroParaMatriz			
+		FinPara
+	FinPara	
+FinSubProceso
+
+
+SubProceso crearVectorSumaFila (matrizMagica, vectorSumaFila, cantidadElementos)
+	Definir sumatoria, i, j Como Entero
+	sumatoria = 0
+	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+		Para j <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+			sumatoria = sumatoria + matrizMagica(i, j)
+		FinPara
+		vectorSumaFila(i) = sumatoria
+		sumatoria = 0
+	FinPara	
+FinSubProceso
+
+
+SubProceso crearVectorSumaColumna (matrizMagica, vectorSumaColumna, cantidadElementos)
+	Definir sumatoria, i, j Como Entero
+	sumatoria = 0	
+	Para j <- 0 Hasta cantidadElementos -1  Con Paso 1 Hacer
+		Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+			sumatoria = sumatoria + matrizMagica(i, j)
+		FinPara
+		vectorSumaColumna(j) = sumatoria
+		sumatoria = 0
+	FinPara
+FinSubProceso
+
+
+SubProceso crearSumaDiagonalPrincipal (matrizMagica, sumaDiagonalUno Por Referencia, cantidadElementos)
+	Definir i, j Como Entero
+	sumaDiagonalUno = 0
+	
+	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+		Para j <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer
+			Si (i == j) Entonces				
+				sumaDiagonalUno = sumaDiagonalUno + matrizMagica(i, j)
+			FinSi			
+		FinPara			
+	FinPara	
+FinSubProceso
+
+
+SubProceso crearSumaDiagonalSecundaria (matrizMagica, sumaDiagonalDos Por Referencia, cantidadElementos)
+	Definir i, j Como Entero
+	sumaDiagonalDos = 0
+	
+	j = cantidadElementos - 1
+	
+	Para i <- 0 Hasta cantidadElementos - 1 Con Paso 1 Hacer				
+		sumaDiagonalDos = sumaDiagonalDos + matrizMagica(i, j)	
+		j = j - 1							
+	FinPara			
+FinSubProceso
 
 
 SubProceso imprimirVector (vector, cantidadElementos)
@@ -144,7 +158,6 @@ SubProceso imprimirMatriz (matriz, cantidadElementos)
 	FinPara	
 FinSubProceso
 
-
 SubProceso nuevoVector (vectorSumaFila, vectorSumaColumna, vectorSumas, cantidadElementos, sumaDiagonalUno, sumaDiagonalDos)
 	Definir i, j Como Entero
 	j = 0
@@ -160,5 +173,24 @@ SubProceso nuevoVector (vectorSumaFila, vectorSumaColumna, vectorSumas, cantidad
 	vectorSumas(j) = sumaDiagonalUno
 	j = j + 1
 	vectorSumas(j) = sumaDiagonalDos		
+	
+FinSubProceso
+
+
+SubProceso analizarVectorSumas (vectorSumas, sumasIguales Por Referencia, sumasDiferentes Por Referencia, cantidadElementos)
+	Definir i, bandera Como Entero
+	sumasIguales = 0
+	sumasDiferentes = 0
+	bandera = vectorSumas(0)
+	
+	Para i <- 0 Hasta (cantidadElementos * 2 + 2 - 1)
+		
+		Si vectorSumas(i) == bandera Entonces
+			sumasIguales = sumasIguales + 1				
+		SiNo
+			sumasDiferentes = sumasDiferentes + 1			
+		FinSi
+		bandera = vectorSumas(i)		
+	FinPara
 	
 FinSubProceso
