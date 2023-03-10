@@ -13,7 +13,7 @@ Algoritmo E022_Ej06_matrizMagicaSuma
 	
 	Definir matrizMagica, i, j, sumaFilasColumnasDiagonal, cantidadElementos, sumatoria, numeroParaMatriz Como Entero
 	Definir vectorSumaFila, vectorSumaColumna, sumaDiagonalUno, sumaDiagonalDos, vectorSumas, bandera Como Entero
-	Definir sumasIguales Como Logico
+	Definir sumasIguales, sumasDiferentes Como Entero
 	
 	Escribir "Registre la cantidad de elementos que tendrá la matriz cuadrada, tanto filas y columnas (De 1 a 10): "
 	Leer cantidadElementos
@@ -97,21 +97,22 @@ Algoritmo E022_Ej06_matrizMagicaSuma
 	Escribir ""
 	nuevoVector(vectorSumaFila, vectorSumaColumna, vectorSumas, cantidadElementos, sumaDiagonalUno, sumaDiagonalDos)
 	
-	sumasIguales = Falso
+	sumasIguales = 0
+	sumasDiferentes = 0
 	bandera = vectorSumas(0)
 	
 	Para i <- 0 Hasta (cantidadElementos * 2 + 2 - 1)
 		
 		Si vectorSumas(i) == bandera Entonces
-			sumasIguales = Verdadero			
+			sumasIguales = sumasIguales + 1						
 		SiNo
-			sumasIguales = Falso
+			sumasDiferentes = sumasDiferentes + 1			
 		FinSi
-		bandera = vectorSumas(i)
+		bandera = vectorSumas(i)		
 	FinPara
 	
 	Escribir ""
-	Si sumasIguales Entonces
+	Si sumasIguales == (cantidadElementos * 2 + 2 ) Entonces
 		Escribir "Es una matriz mágica, ya que: "
 		Escribir "La suma de los elementos de cada fila y"
 		Escribir "La suma de los elementos de cada columna y"
