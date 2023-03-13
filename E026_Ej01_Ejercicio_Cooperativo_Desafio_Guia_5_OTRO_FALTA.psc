@@ -1,4 +1,4 @@
-Algoritmo E027_Ej01_Integrador
+Algoritmo E026_Ej01_Ejercicio_Cooperativo_Desafio_Guia_26
 	//	Se debe crear una matriz con las siguientes palabras como se muestra a continuación. Luego de
 	//	eso debemos acomodar las palabras para que la primera letra ?R? de cada una quede en la
 	//		posición 5, alineándose.
