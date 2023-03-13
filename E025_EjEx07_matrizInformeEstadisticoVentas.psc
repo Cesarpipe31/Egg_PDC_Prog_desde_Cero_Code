@@ -61,12 +61,12 @@ SubProceso imprimirMatriz (matriz, vector)
 	Definir i, j Como Entero
 	Para i <- 0 Hasta 5 Hacer
 		Para j <- 0 Hasta 5 Hacer
-			Escribir Sin Saltar "[ " matriz(i, j) " ]"
+			Escribir Sin Saltar "[  " matriz(i, j) "  ]"
 		FinPara
 		Escribir ""
 	FinPara
 	Para i <- 0 Hasta 4  Hacer
-		Escribir Sin Saltar "[" vector(i) " ]"
+		Escribir Sin Saltar "[  " vector(i) "  ]"
 	FinPara	
 FinSubProceso
 
