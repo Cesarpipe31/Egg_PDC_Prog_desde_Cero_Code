@@ -64,7 +64,7 @@ Algoritmo E027_Ej01_Integrador_Apocalipsis_Zombie
 	Definir matrizGenZ, genRegistrado Como Caracter
 	Definir filasyColumnas, posicion como Entero
 	
-	genRegistrado = "CACBCACAC"
+	genRegistrado = "BCAADCCBABCCBABB"
 	filasyColumnas = 0
 	validarMatriz(genRegistrado, filasyColumnas)
 	Dimension matrizGenZ(filasyColumnas, filasyColumnas)
